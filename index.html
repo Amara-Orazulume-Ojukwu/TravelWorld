@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelWorld | Explore the World</title>
+
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="home-page">
+
+    <!-- NAVBAR -->
+    <header class="home-navbar">
+        <a href="index.html" class="home-logo">
+            TRAVEL<span>WORLD</span><i class="fa-solid fa-plane"></i>
+            <small>Explore the world with us</small>
+        </a>
+
+        <button class="home-menu-toggle" id="homeMenuToggle"
+            aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="home-nav-links" id="homeNavLinks">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="tours.html">Tours</a>
+            <a href="login.html">Login</a>
+            <a href="register.html" class="home-register-link">Register</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="home-hero">
+            <div class="home-hero-content">
+                <span class="home-pill">
+                    Explore The World <i class="fa-solid fa-earth-americas"></i>
+                </span>
+
+                <h1>
+                    Traveling opens the door to
+                    creating <span>memories</span>
+                </h1>
+
+                <p>
+                    Discover beautiful destinations, experience different
+                    cultures and create unforgettable memories with TravelWorld.
+                    Your next adventure starts here.
+                </p>
+            </div>
+
+            <div class="home-hero-gallery">
+                <img
+                    src="img card (2).png"
+                    alt="Traveller exploring the mountains">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=500&q=85"
+                    alt="Colourful coastal village">
+
+                <img
+                    src="img card (3).png"
+                    alt="Beautiful travel destination">
+            </div>
+        </section>
+
+        <!-- SEARCH BAR -->
+        <section class="home-search-section">
+            <form class="home-search-bar" id="homeSearchForm">
+
+                <label class="home-search-field">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>
+                        <strong>Location</strong>
+                        <input type="text" id="homeLocation"
+                            placeholder="Where are you going?">
+                    </span>
+                </label>
+
+                <label class="home-search-field">
+                    <i class="fa-solid fa-route"></i>
+                    <span>
+                        <strong>Distance</strong>
+                        <select id="homeDistance">
+                            <option value="">Any distance</option>
+                            <option value="500">Within 500 km</option>
+                            <option value="1000">Within 1000 km</option>
+                            <option value="5000">Within 5000 km</option>
+                        </select>
+                    </span>
+                </label>
+
+                <label class="home-search-field">
+                    <i class="fa-solid fa-users"></i>
+                    <span>
+                        <strong>Max People</strong>
+                        <input type="number" id="homePeople"
+                            min="1" max="100" placeholder="e.g. 4">
+                    </span>
+                </label>
+
+                <button type="submit" class="home-search-button"
+                    aria-label="Search tours">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <p id="homeSearchMessage" class="home-search-message"
+                aria-live="polite"></p>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="home-services">
+            <div class="home-services-intro">
+                <span class="home-section-label">What We Offer</span>
+                <h2>We offer our best services</h2>
+            </div>
+
+            <article class="home-service-card">
+                <div class="home-service-icon">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                </div>
+                <h3>Calculate Weather</h3>
+                <p>Plan your trip with helpful weather information.</p>
+            </article>
+
+            <article class="home-service-card">
+                <div class="home-service-icon">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <h3>Best Tour Guide</h3>
+                <p>Discover places with helpful travel guides.</p>
+            </article>
+
+            <article class="home-service-card">
+                <div class="home-service-icon">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+                <h3>Customization</h3>
+                <p>Make your next adventure suit your preferences.</p>
+            </article>
+        </section>
+
+        <!-- FEATURED TOURS -->
+        <section class="home-featured">
+            <div class="home-section-heading">
+                <span class="home-section-label">Explore</span>
+                <h2>Our featured tours</h2>
+            </div>
+
+            <div class="home-destinations" id="homeDestinations">
+
+                <a href="tours.html" class="home-destination home-destination-london"
+                    data-destination="London" data-distance="5000">
+                    <img src="big ben.png"
+                        alt="London city skyline">
+                    
+                </a>
+
+                <a href="tours.html" class="home-destination home-destination-bali"
+                    data-destination="Bali Indonesia" data-distance="5000">
+                    <img src="bali.png"
+                        alt="Bali tropical temple">
+                    
+                </a>
+
+                <a href="tours.html" class="home-destination home-destination-australia"
+                    data-destination="Australia Sydney" data-distance="5000">
+                    <img src="sydney.png"
+                        alt="Sydney Australia">
+                    
+                </a>
+
+                <a href="tours.html" class="home-destination home-destination-dubai"
+                    data-destination="Dubai UAE" data-distance="5000">
+                    <img src="dubai.png"
+                        alt="Dubai skyline">
+                    
+                </a>
+
+                <a href="tours.html" class="home-destination home-destination-thailand"
+                    data-destination="Thailand Phuket" data-distance="5000">
+                    <img src="phetchabun.png"
+                        alt="Thailand tropical scenery">
+                    
+                </a>
+
+                <a href="tours.html" class="home-destination home-destination-paris"
+                    data-destination="Paris France" data-distance="5000">
+                    <img src="paris.png"
+                        alt="Paris France">
+                    <span class="home-destination-text">
+                        <em>Paris</em>
+                        <strong>FRANCE</strong>
+                    </span>
+                </a>
+
+                <a href="tours.html" class="home-destination home-destination-china"
+                    data-destination="China Shanghai" data-distance="5000">
+                    <img src="wuxi.png"
+                        alt="Traditional Chinese architecture">
+                    <span class="home-destination-text">
+                        <em>Discover</em>
+                        <strong>CHINA</strong>
+                    </span>
+                </a>
+
+            </div>
+
+            <p class="home-no-results" id="homeNoResults" hidden>
+                No destinations match your search. Try another location.
+            </p>
+
+            <button class="home-load-more" id="homeLoadMore" type="button">
+                Load More
+            </button>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="home-experience">
+            <div class="home-experience-content">
+                <span class="home-section-label">Our Experience</span>
+                <h2>With our experience<br>we will serve you</h2>
+
+                <p>
+                    Our experienced team helps you discover amazing places
+                    and enjoy memorable travel experiences.
+                </p>
+
+                <div class="home-statistics">
+                    <div class="home-stat">
+                        <strong>12k+</strong>
+                        <span>Successful Trips</span>
+                    </div>
+
+                    <div class="home-stat">
+                        <strong>2k+</strong>
+                        <span>Regular Clients</span>
+                    </div>
+
+                    <div class="home-stat">
+                        <strong>15</strong>
+                        <span>Years Experience</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-experience-image">
+                <img src="experience 1 (1).png"
+                    alt="Traveller enjoying an adventure">
+                <div class="home-experience-badge">
+                
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOMER GALLERY -->
+        <section class="home-gallery-section">
+            <div class="home-section-heading">
+                <span class="home-section-label">Gallery</span>
+                <h2>Visit our customers tour gallery</h2>
+            </div>
+
+            <div class="home-gallery-grid">
+                <img src="gallery7.png"
+                    alt="Mountain adventure">
+                <img src="Frame 23.png"
+                    alt="Sunny beach">
+                <img src="Frame 20.png"
+                    alt="Beautiful lake">
+                <img src="gallery5.png"
+                    alt="Tropical beach">
+                <img src="gallery8.png"
+                    alt="Ocean and island">
+                <img src="Frame 19.png"
+                    alt="Snowy mountain">
+                <img src="Frame 21.png"
+                    alt="Traveller on holiday">
+                <img src="Frame 25.png"
+                    alt="Scenic natural landscape">
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="home-testimonials">
+            <div class="home-section-heading">
+                <span class="home-section-label">Your Love</span>
+                <h2>What our fans say about us</h2>
+            </div>
+
+            <div class="home-testimonial-grid">
+                <article class="home-review">
+                    <div class="home-stars">★★★★★</div>
+                    <p>
+                        TravelWorld made planning my holiday simple.
+                        The destinations were beautiful and the experience
+                        was unforgettable.
+                    </p>
+                    <div class="home-review-person">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80"
+                            alt="John Doe">
+                        <div>
+                            <strong>John Doe</strong>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="home-review">
+                    <div class="home-stars">★★★★★</div>
+                    <p>
+                        I enjoyed discovering new places with TravelWorld.
+                        The website helped me organise a lovely trip with
+                        my family.
+                    </p>
+                    <div class="home-review-person">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
+                            alt="Ally Gomez">
+                        <div>
+                            <strong>Ally Gomez</strong>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="home-review">
+                    <div class="home-stars">★★★★★</div>
+                    <p>
+                        A great way to find inspiration for my next
+                        adventure. I look forward to booking another
+                        destination soon.
+                    </p>
+                    <div class="home-review-person">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&q=80"
+                            alt="Alex Brown">
+                        <div>
+                            <strong>Alex Brown</strong>
+                            <span>Customer</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="home-newsletter">
+            <div class="home-newsletter-content">
+                <h2>Subscribe now to get useful traveling information</h2>
+
+                <form id="homeNewsletterForm" class="home-newsletter-form">
+                    <input type="email" id="homeNewsletterEmail"
+                        placeholder="Enter your email" aria-label="Your email address"
+                        required>
+                    <button type="submit">Subscribe</button>
+                </form>
+
+                <p>
+                    Get travel inspiration, destination ideas and useful
+                    information delivered to your inbox.
+                </p>
+
+                <p id="homeNewsletterMessage" aria-live="polite"></p>
+            </div>
+
+            <div class="home-newsletter-image">
+                <img src="male-tourist 1.png"
+                    alt="Traveller ready to explore">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="home-footer">
+        <div class="home-footer-brand">
+            <a href="index.html" class="home-logo">
+                TRAVEL<span>WORLD</span><i class="fa-solid fa-plane"></i>
+                <small>Explore the world with us</small>
+            </a>
+
+            <p>
+                Discover the world's most beautiful destinations
+                and create memories that last a lifetime.
+            </p>
+
+            <div class="home-social-links">
+                <a href="https://www.youtube.com/" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://www.twitter.com/" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <small class="home-copyright">
+                © 2026 TravelWorld. All Rights Reserved.
+            </small>
+        </div>
+
+        <div class="home-footer-column">
+            <h3>Discover</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="tours.html">Tours</a>
+        </div>
+
+        <div class="home-footer-column">
+            <h3>Quick Links</h3>
+            <a href="gallery.html">Gallery</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+
+        <div class="home-footer-column home-contact">
+            <h3>Contact</h3>
+            <p><i class="fa-solid fa-location-dot"></i>
+                <strong>Address:</strong> Lorem ipsum
+            </p>
+            <p><i class="fa-regular fa-envelope"></i>
+                <strong>Email:</strong> xyz@mail.com
+            </p>
+            <p><i class="fa-solid fa-phone"></i>
+                <strong>Phone:</strong> 000222002222
+            </p>
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

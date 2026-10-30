@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelWorld - Login</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span>TRAVEL</span><span class="orange">WORLD</span>
+            <i class="fa-solid fa-plane"></i>
+            <small>Explore the world with us</small>
+        </a>
+
+        <nav>
+            <a href="login.html" class="nav-login active">Login</a>
+            <a href="register.html" class="nav-register">Register</a>
+        </nav>
+    </header>
+
+    <main class="main-section">
+
+        <section class="travel-image">
+            <img
+                src="img (1).png"
+                alt="Travel landscape">
+
+            <div class="image-caption">
+                <h2>Explore the world</h2>
+                <p>Your next adventure starts here.</p>
+            </div>
+        </section>
+
+        <section class="auth-section">
+
+            <div class="flight-decoration">
+                <i class="fa-solid fa-plane"></i>
+            </div>
+
+            <div class="form-container login-container">
+
+                <h1>Welcome</h1>
+                <p class="subtitle">Login with Email</p>
+
+                <form id="loginForm">
+
+                    <input
+                        type="text"
+                        id="loginEmail"
+                        placeholder="Enter Email or Username"
+                        autocomplete="username"
+                        required>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter Password"
+                        autocomplete="current-password"
+                        required>
+
+                    <div class="forgot-password">
+                        <a href="#" id="forgotPassword">
+                            Forgot your password?
+                        </a>
+                    </div>
+
+                    <button type="submit" class="submit-button">
+                        LOGIN
+                    </button>
+
+                    <p class="message" id="loginMessage" role="status"></p>
+
+                    <div class="divider">
+                        <span></span>
+                        <p>OR</p>
+                        <span></span>
+                    </div>
+
+                    <div class="social-buttons">
+                        <button type="button" class="social google"
+                            data-provider="Google" aria-label="Google login">
+                            <i class="fa-brands fa-google"></i>
+                        </button>
+
+                        <button type="button" class="social facebook"
+                            data-provider="Facebook" aria-label="Facebook login">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+
+                        <button type="button" class="social apple"
+                            data-provider="Apple" aria-label="Apple login">
+                            <i class="fa-brands fa-apple"></i>
+                        </button>
+                    </div>
+
+                    <p class="switch-text">
+                        Don't have an account?
+                        <a href="register.html">Register Now</a>
+                    </p>
+
+                </form>
+            </div>
+
+            <div class="landmark landmark-taj">
+                <i class="fa-solid fa-landmark"></i>
+            </div>
+
+            <div class="landmark landmark-city">
+                <i class="fa-solid fa-city"></i>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-column footer-about">
+
+            <a href="index.html" class="logo footer-logo">
+                <span>TRAVEL</span><span class="orange">WORLD</span>
+                <i class="fa-solid fa-plane"></i>
+                <small>Explore the world with us</small>
+            </a>
+
+            <p class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Commodi, enim.
+            </p>
+
+            <div class="social-icons">
+                <a href="#" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <p class="copyright">
+                © 2024 <span class="orange">Vapix Industries.</span>
+                All Rights Reserved
+            </p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Discover</h3>
+            <a href="index.html">Home</a>
+            <a href="#">About</a>
+            <a href="tours.html">Tours</a>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="gallery.html">Gallery</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+
+        <div class="footer-column contact">
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                <strong>Address:</strong> Lorem
+            </p>
+
+            <p>
+                <i class="fa-regular fa-envelope"></i>
+                <strong>Email:</strong> xyz@mail.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <strong>Phone:</strong> 000222002222
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

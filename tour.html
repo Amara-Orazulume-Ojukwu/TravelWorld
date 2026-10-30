@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tours | TravelWorld</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="tours-body">
+
+    <!-- NAVBAR -->
+    <header class="tours-navbar">
+        <a href="index.html" class="tours-logo">
+            <span>TRAVEL</span><strong>WORLD</strong>
+            <i class="fa-solid fa-plane"></i>
+        </a>
+
+        <nav class="tours-nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="tour.html" class="tours-nav-active">Tours</a>
+            <a href="login.html">Login</a>
+            <a href="register.html" class="tours-register-btn">Register</a>
+        </nav>
+    </header>
+
+    <main class="tours-page">
+
+        <!-- HERO BANNER -->
+        <section class="tours-hero">
+            <div class="tours-hero-shade"></div>
+            <h1><span>All</span> Tours</h1>
+        </section>
+
+        <!-- SEARCH BAR -->
+        <section class="tours-search-section">
+
+            <form class="tours-search-form" id="toursSearchForm">
+
+                <div class="tours-search-field">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <label for="toursLocation">Location</label>
+                        <input type="text" id="toursLocation"
+                               placeholder="Where are you going?">
+                    </div>
+                </div>
+
+                <div class="tours-search-field">
+                    <i class="fa-solid fa-route"></i>
+                    <div>
+                        <label for="toursDistance">Distance</label>
+                        <input type="number" id="toursDistance"
+                               min="0" placeholder="Distance in km">
+                    </div>
+                </div>
+
+                <div class="tours-search-field">
+                    <i class="fa-solid fa-users"></i>
+                    <div>
+                        <label for="toursPeople">Max People</label>
+                        <input type="number" id="toursPeople"
+                               min="1" placeholder="Number of people">
+                    </div>
+                </div>
+
+                <button type="submit" class="tours-search-button"
+                        aria-label="Search tours">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+            </form>
+
+            <p id="toursSearchMessage" class="tours-search-message"
+               role="status"></p>
+
+            <div class="tours-plane-decoration">
+                <i class="fa-solid fa-plane"></i>
+            </div>
+        </section>
+
+        <!-- FEATURED TOURS -->
+        <section class="tours-featured">
+
+            <h2 class="tours-section-title">
+                Our Featured <span>Tours</span>
+            </h2>
+
+            <div class="tours-featured-grid" id="toursFeaturedGrid">
+
+                <!-- DUBAI -->
+                <article class="tours-card"
+                         data-location="dubai uae united arab emirates"
+                         data-distance="120" data-people="10">
+
+                    <a href="tour-details.html?destination=dubai"
+                       class="tours-card-image">
+
+                        <img
+                            src="dubai.png"
+                            alt="Dubai city skyline">
+
+                        <div class="tours-card-shade"></div>
+
+                        <div class="tours-card-caption">
+                            <span class="tours-script">Dubai</span>
+                            <h3>UAE</h3>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- BALI -->
+                <article class="tours-card"
+                         data-location="bali indonesia"
+                         data-distance="80" data-people="8">
+
+                    <a href="tour-details.html?destination=bali"
+                       class="tours-card-image">
+
+                        <img
+                            src="bali.png"
+                            alt="Tropical Bali landscape">
+
+                        <div class="tours-card-shade"></div>
+
+                        <div class="tours-card-caption">
+                            <span class="tours-script">Bali</span>
+                            <h3>INDONESIA</h3>
+                        </div>
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- DESTINATION GALLERY -->
+        <section class="tours-destinations">
+
+            <h2 class="tours-section-title">
+                Explore Our <span>Destinations</span>
+            </h2>
+
+            <div class="tours-gallery-grid" id="toursGalleryGrid">
+
+                <!-- SMALL CARD: AUSTRALIA -->
+                <article class="tours-gallery-card tours-small"
+                         data-location="australia"
+                         data-distance="300" data-people="12">
+
+                    <a href="tour-details.html?destination=australia">
+                        <img
+                            src="sydney.png"
+                            alt="Sydney Harbour in Australia">
+                        <div class="tours-gallery-shade"></div>
+                        <h3>AUSTRALIA</h3>
+                    </a>
+                </article>
+
+                <!-- SMALL CARD: INDONESIA -->
+                <article class="tours-gallery-card tours-small"
+                         data-location="indonesia"
+                         data-distance="80" data-people="8">
+
+                    <a href="tour-details.html?destination=indonesia">
+                        <img
+                            src="phetchabun.png"
+                            alt="Island scenery in Indonesia">
+                        <div class="tours-gallery-shade"></div>
+                        <h3>INDONESIA</h3>
+                    </a>
+                </article>
+
+                <!-- SMALL CARD: CHINA -->
+                <article class="tours-gallery-card tours-small"
+                         data-location="china"
+                         data-distance="200" data-people="10">
+
+                    <a href="tour-details.html?destination=china">
+                        <img
+                            src="wuxi.png"
+                            alt="Beautiful Resort in China">
+                        <div class="tours-gallery-shade"></div>
+                        <h3>CHINA</h3>
+                    </a>
+                </article>
+
+                <!-- LARGE CARD: LONDON -->
+                <article class="tours-gallery-card tours-large"
+                         data-location="london england united kingdom"
+                         data-distance="150" data-people="12">
+
+                    <a href="tour-details.html?destination=london">
+                        <img
+                            src="big ben.png"
+                            alt="Big Ben and London at sunset">
+                        <div class="tours-gallery-shade"></div>
+                        <div class="tours-gallery-caption">
+                            <span class="tours-script">Big Ben</span>
+                            <h3>LONDON</h3>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- LARGE CARD: FRANCE -->
+                <article class="tours-gallery-card tours-large"
+                         data-location="france paris"
+                         data-distance="100" data-people="10">
+
+                    <a href="tour-details.html?destination=france">
+                        <img
+                            src="paris.png"
+                            alt="Eiffel Tower in Paris">
+                        <div class="tours-gallery-shade"></div>
+                        <div class="tours-gallery-caption">
+                            <span class="tours-script">Paris</span>
+                            <h3>FRANCE</h3>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- SMALL CARD: MALDIVES -->
+                <article class="tours-gallery-card tours-small"
+                         data-location="maldives"
+                         data-distance="60" data-people="8">
+
+                    <a href="tour-details.html?destination=maldives">
+                        <img
+                            src="maatushi island.png"
+                            alt="Maldives tropical island">
+                        <div class="tours-gallery-shade"></div>
+                        <h3>MALDIVES</h3>
+                    </a>
+                </article>
+
+                <!-- SMALL CARD: THAILAND -->
+                <article class="tours-gallery-card tours-small"
+                         data-location="thailand"
+                         data-distance="90" data-people="10">
+
+                    <a href="tour-details.html?destination=thailand">
+                        <img
+                            src="phi phi island.png"
+                            alt="Tropical scenery in Thailand">
+                        <div class="tours-gallery-shade"></div>
+                        <h3>THAILAND</h3>
+                    </a>
+                </article>
+
+                <!-- SMALL CARD: PHILIPPINES -->
+                <article class="tours-gallery-card tours-small"
+                         data-location="philippines"
+                         data-distance="100" data-people="8">
+
+                    <a href="tour-details.html?destination=philippines">
+                        <img
+                            src="el nido.png"
+                            alt="Tropical island in the Philippines">
+                        <div class="tours-gallery-shade"></div>
+                        <h3>PHILIPPINES</h3>
+                    </a>
+                </article>
+
+            </div>
+
+            <p id="toursNoResults" class="tours-no-results" hidden>
+                No destinations match your search. Try different options.
+            </p>
+
+            <button type="button" id="toursLoadMore"
+                    class="tours-load-more">
+                Load More
+            </button>
+
+            <button type="button" id="toursShowAll"
+                    class="tours-load-more" hidden>
+                Show All Destinations
+            </button>
+
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="tours-newsletter">
+
+            <div class="tours-newsletter-content">
+                <h2>Subscribe now to get useful traveling information</h2>
+
+                <form class="tours-newsletter-form"
+                      id="toursNewsletterForm">
+
+                    <label class="tours-visually-hidden"
+                           for="toursNewsletterEmail">
+                        Your email address
+                    </label>
+
+                    <input type="email" id="toursNewsletterEmail"
+                           placeholder="Enter your email"
+                           required>
+
+                    <button type="submit">Subscribe</button>
+                </form>
+
+                <p class="tours-newsletter-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Subscribe to receive useful travel information.
+                </p>
+
+                <p id="toursNewsletterMessage"
+                   class="tours-newsletter-message" role="status"></p>
+            </div>
+
+            <div class="tours-newsletter-image">
+                <img
+                    src="male-tourist 1.png"
+                    alt="Traveller ready to explore the world">
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="tours-footer">
+
+        <div class="tours-footer-brand">
+
+            <a href="index.html" class="tours-logo">
+                <span>TRAVEL</span><strong>WORLD</strong>
+                <i class="fa-solid fa-plane"></i>
+            </a>
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Commodi, enim.
+            </p>
+
+            <div class="tours-socials">
+                <a href="https://www.youtube.com/" aria-label="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://x.com/" aria-label="X">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+
+            <p class="tours-copyright">
+                &copy; <span id="toursCopyrightYear">2026</span>
+                <span class="tours-copyright-brand">Vijay Web Designs.</span>
+                All Rights Reserved.
+            </p>
+        </div>
+
+        <div class="tours-footer-column">
+            <h3>Discover</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="tours.html">Tours</a>
+        </div>
+
+        <div class="tours-footer-column">
+            <h3>Quick Links</h3>
+            <a href="gallery.html">Gallery</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+
+        <div class="tours-footer-column tours-footer-contact">
+            <h3>Contact</h3>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                <span><strong>Address:</strong> Lorem</span>
+            </p>
+
+            <p>
+                <i class="fa-regular fa-envelope"></i>
+                <span><strong>Email:</strong> xyz@mail.com</span>
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                <span><strong>Phone:</strong> 000222002222</span>
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
